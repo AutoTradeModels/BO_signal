@@ -1,0 +1,60 @@
+
+■自動売買機能利用上の留意点
+
+本件シグナルツールには、自動売買機能が付与されていますが、ハイローオーストラリアの規約上、自動売買ソフトの利用は認められておりません。
+これは、同一の自動売買ツールを用いたユーザーからの同一時刻同一注文による集中リスクやサーバー負荷を軽減するためであると推測され、この点について、本件シグナルツールにおける自動売買機能の利用は禁止の趣旨に反するものではないと思料します。
+しかしながら、少なくとも形式上、自動売買ソフトの利用は認められておらず、場合によっては、口座凍結が発生する可能性があることから、あくまで、シグナルツールのパフォーマンス検証のための機能としてご活用ください。
+
+
+■ソフトウェアの準備
+
+・Anaconda Python 3.7：https://www.anaconda.com/distribution/
+
+・pyarmor：スタートメニューから Anaconda Prompt を検索し、立ち上げる。 → pip install pyarmor と入力実行。
+
+・oandapyV20：スタートメニューから Anaconda Prompt を検索し、立ち上げる。 → pip install oandapyV20 と入力実行。
+
+・selenium：スタートメニューから Anaconda Prompt を検索し、立ち上げる。 → pip install selenium と入力実行。
+
+・Google Chrome：https://www.google.com/chrome/
+
+・Chrome Driver：https://chromedriver.chromium.org/downloads Google Chrome のバージョンに合わせること。　
+		ダウンロード後、'C:/chromedriver_win32/chromedriver.exe' に格納する。（Windowsの場合）		
+
+
+■設定（OSは、Windowsを想定していますが、基本的には、MacやLinuxでも同じ手順で、ご利用頂けます。）
+
+・スタートメニューから Anaconda Prompt を検索し、立ち上げる。
+
+・ワーキングディレクトリ(BinaryOption)を作成する。(base) C:\Users\username>mkdir BinaryOption 
+
+・ワーキングディレクトリ(BinaryOption)に移動する。(base) C:\Users\username>cd BinaryOption
+
+・Github(https://github.com/shikuriyuta/BO_signal)からご自身の会員番号のzipファイル（BO_xxxxx）をダウンロードし、中身をワーキングディレクトリ(BinaryOption)に格納する。
+
+
+■実行（OSは、Windowsを想定していますが、基本的には、MacやLinuxでも同じ手順で、ご利用頂けます。）
+
+・ワーキングディレクトリ(BinaryOption)に移動する。(base) C:\Users\username>cd BinaryOption
+
+
+（シグナル機能）
+
+・エディタ（spyder）を開いて、example.py のID（登録アドレス）、token（OANDA）、instrument（通貨）を編集する。(base) C:\Users\username\BinaryOption>spyder example.py
+
+・example.py を実行する。(base) C:\Users\username\BinaryOption>python example.py
+
+
+（自動売買機能）
+
+・エディタ（spyder）を開いて、info.py を編集する。(base) C:\Users\username\BinaryOption>spyder info.py
+
+　ID：ハイローオーストラリアの登録メールアドレス
+　PW：ハイローオーストラリアのパスワード
+  token：OANDAのtoken
+　price：一回あたりの掛け金
+　driver：Chrome Driverの格納場所 'C:/chromedriver_win32/chromedriver.exe'
+　confidence：各通貨に与えるストレス係数（推奨値は、info.pyに設定済み。）
+
+・自動売買ツールを実行する。(base) C:\Users\username\BinaryOption>multi.bat（５通貨実行の場合）
+			　　(base) C:\Users\username\BinaryOption>python BO_USD_JPY.py（各通貨実行の場合）
