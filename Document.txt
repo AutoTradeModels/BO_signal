@@ -24,7 +24,5 @@
 　PW：ハイローオーストラリアのパスワード
   token：OANDAのtoken
 　directory：Chrome Driverの格納場所 'C:/chromedriver_win32/chromedriver.exe'
-  model:学習済みモジュールの格納場所 "BO.pickle" 
 　price：一回あたりの掛金
-　alpha：上側α点 （推奨値は、info.pyに設定済）
 ・自動売買ツールを実行する。(base) C:\Users\username\BinaryOption>python operation.py  
