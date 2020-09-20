@@ -7,6 +7,7 @@
 ・pyarmor：スタートメニューから Anaconda Prompt を検索し、立ち上げる。 → pip install pyarmor と入力実行。
 ・oandapyV20：スタートメニューから Anaconda Prompt を検索し、立ち上げる。 → pip install oandapyV20 と入力実行。
 ・selenium：スタートメニューから Anaconda Prompt を検索し、立ち上げる。 → pip install selenium と入力実行。
+・umap:スタートメニューから Anaconda Prompt を検索し、立ち上げる。 → pip install umap-learn と入力実行。
 ・Google Chrome：https://www.google.com/chrome/
 ・Chrome Driver：https://chromedriver.chromium.org/downloads、バージョンに注意。 'C:/chromedriver_win32/chromedriver.exe' に格納。	
 
@@ -24,5 +25,6 @@
 　PW：ハイローオーストラリアのパスワード
   token：OANDAのtoken
 　directory：Chrome Driverの格納場所 'C:/chromedriver_win32/chromedriver.exe'
+  operation：True とすると自動売買開始
 　price：一回あたりの掛金
 ・自動売買ツールを実行する。(base) C:\Users\username\BinaryOption>python operation.py  
