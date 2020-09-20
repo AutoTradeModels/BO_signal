@@ -1,6 +1,6 @@
 
 ■ソフトウェア利用上の留意点
-本件ソフトウェアは、自己責任の範囲でご利用ください。当方では、一切の責任を負いかねますので、ご了承ください。
+当該ソフトウェアは、自己責任の範囲でご利用ください。当方では、一切の責任を負いかねますので、ご了承ください。
 
 ■準備
 ・Anaconda Python 3.7：https://www.anaconda.com/distribution/
@@ -15,7 +15,7 @@
 ・スタートメニューから Anaconda Prompt を検索し、立ち上げる。
 ・ワーキングディレクトリ(BinaryOption)を作成する。(base) C:\Users\username>mkdir BinaryOption 
 ・ワーキングディレクトリ(BinaryOption)に移動する。(base) C:\Users\username>cd BinaryOption
-・https://github.com/AutoTradeModels/BO_signal からダウンロードしたファイル（BO_xxxxx.zip）の中身をワーキングディレクトリ(BinaryOption)に格納する。
+・https://github.com/AutoTradeModels/BO_signal からダウンロードしたファイル（Code.zip）の中身をワーキングディレクトリ(BinaryOption)に格納する。
 
 ■実行（OSは、Windowsを想定していますが、基本的には、MacやLinuxでも同じ手順で、ご利用頂けます。）
 ・ワーキングディレクトリ(BinaryOption)に移動する。(base) C:\Users\username>cd BinaryOption
@@ -25,6 +25,13 @@
 　PW：ハイローオーストラリアのパスワード
   token：OANDAのtoken
 　directory：Chrome Driverの格納場所 'C:/chromedriver_win32/chromedriver.exe'
-  operation：True とすると自動売買開始
+  auto：True とすると自動売買
+  order_instrument：GBPJPYを指定するHTMLコード
 　price：一回あたりの掛金
-・自動売買ツールを実行する。(base) C:\Users\username\BinaryOption>python operation.py  
+  alpha：ストレス値
+  start_train：学習開始期
+  end_train：学習終了期
+  start_test：テスト開始期
+  end_test：テスト終了期
+・レート配信ツールの学習を実行する。(base) C:\Users\username\BinaryOption>python training.py
+・レート配信ツールを実行する。(base) C:\Users\username\BinaryOption>python operation.py
